@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorites - Recipe Hub</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark">
+
+<header>
+  <div class="logo">🍽️ Recipe Hub</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="favorites.html" class="active">Favorites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="darkModeToggle">🌙</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>My Favorite Recipes</h1>
+    <p>Here are all your saved favorites. Remove any you don’t want to keep.</p>
+  </section>
+
+  <div id="favoritesList" class="recipe-grid"></div>
+</main>
+
+<footer>
+  <p>© 2026 Recipe Hub</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  // Ensure favorites render when page loads
+  document.addEventListener("DOMContentLoaded", function() {
+    renderFavorites();
+  });
+</script>
+
+</body>
+</html>

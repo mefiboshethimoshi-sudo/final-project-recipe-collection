@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Hub</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark">
+<header>
+  <div class="logo">🍽️ Recipe Hub</div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="darkModeToggle">🌙</button>
+</header>
+
+<section class="hero">
+  <h1>Delicious Recipes</h1>
+  <p>Discover, cook & save your favorite meals</p>
+  <p id="randomTip" class="tip"></p>
+</section>
+
+<section class="search-filter">
+  <input type="text" id="search" placeholder="Search recipes...">
+  <ul id="autocomplete" class="autocomplete"></ul>
+  <select id="category">
+    <option value="All">All</option>
+    <option>Breakfast</option>
+    <option>Lunch</option>
+    <option>Dinner</option>
+    <option>Dessert</option>
+  </select>
+</section>
+
+<main>
+  <div class="recipe-grid">
+    <!-- Recipe 1 -->
+    <div class="recipe-card">
+      <img src="images/images (1).jpeg" alt="Pancakes">
+      <h3>Pancakes</h3>
+      <button class="view-btn" onclick="openModal(1)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(1)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 2 -->
+    <div class="recipe-card">
+      <img src="images/images (3).jpeg" alt="Omelette">
+      <h3>Omelette</h3>
+      <button class="view-btn" onclick="openModal(2)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(2)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 3 -->
+    <div class="recipe-card">
+      <img src="images/images (2).jpeg" alt="Grilled Chicken">
+      <h3>Grilled Chicken</h3>
+      <button class="view-btn" onclick="openModal(3)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(3)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 4 -->
+    <div class="recipe-card">
+      <img src="images/images1.jpeg" alt="Caesar Salad">
+      <h3>Caesar Salad</h3>
+      <button class="view-btn" onclick="openModal(4)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(4)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 5 -->
+    <div class="recipe-card">
+      <img src="images/images (4).jpeg" alt="Spaghetti Bolognese">
+      <h3>Spaghetti Bolognese</h3>
+      <button class="view-btn" onclick="openModal(5)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(5)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 6 -->
+    <div class="recipe-card">
+      <img src="images/images (5).jpeg" alt="Steak">
+      <h3>Steak</h3>
+      <button class="view-btn" onclick="openModal(6)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(6)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 7 -->
+    <div class="recipe-card">
+      <img src="images/images (6).jpeg" alt="Chocolate Cake">
+      <h3>Chocolate Cake</h3>
+      <button class="view-btn" onclick="openModal(7)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(7)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 8 -->
+    <div class="recipe-card">
+      <img src="images/images (7).jpeg" alt="Ice Cream">
+      <h3>Ice Cream</h3>
+      <button class="view-btn" onclick="openModal(8)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(8)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 9 -->
+    <div class="recipe-card">
+      <img src="images/images (8).jpeg" alt="Fruit Salad">
+      <h3>Fruit Salad</h3>
+      <button class="view-btn" onclick="openModal(9)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(9)">❤️ Add to Favorites</button>
+    </div>
+    <!-- Recipe 10 -->
+    <div class="recipe-card">
+      <img src="images/images (9).jpeg" alt="Avocado Toast">
+      <h3>Avocado Toast</h3>
+      <button class="view-btn" onclick="openModal(10)">👁️ View</button>
+      <button class="fav-btn" onclick="addFavorite(10)">❤️ Add to Favorites</button>
+    </div>
+  </div>
+</main>
+
+<!-- Recipe Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Recipe Image">
+    <h2 id="recipe-title"></h2>
+    <ul id="ingredients"></ul>
+    <button onclick="addFavoriteModal()">❤️ Add to Favorites</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Recipe Hub</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
